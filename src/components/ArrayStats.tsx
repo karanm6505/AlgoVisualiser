@@ -22,13 +22,13 @@ const ArrayStats: React.FC<ArrayStatsProps> = ({ array }) => {
     return acc;
   }, {} as Record<number, number>);
   
-  // Find most frequent value
-  let mode = 0;
+  // Find most frequent value - but we don't use it in the UI
+  // Remove the unused 'mode' variable that's causing the build error
   let maxCount = 0;
-  for (const [value, count] of Object.entries(valueCounts)) {
+  for (const [_, count] of Object.entries(valueCounts)) {
     if (count > maxCount) {
       maxCount = count;
-      mode = parseInt(value);
+      // Removed: mode = parseInt(value);
     }
   }
   
