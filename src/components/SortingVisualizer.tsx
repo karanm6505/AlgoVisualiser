@@ -201,43 +201,22 @@ const SortingVisualizer: React.FC<SortingVisualizerProps> = ({ algorithm, speed,
   );
 };
 
-// Helper function to get the full algorithm name
-const getAlgorithmName = (algorithm: AlgorithmType): string => {
-  const names: Record<SortingAlgorithmType, string> = {
-    'bubble': 'Bubble Sort',
-    'selection': 'Selection Sort',
-    'insertion': 'Insertion Sort',
-    'merge': 'Merge Sort',
-    'quick': 'Quick Sort',
-    'heap': 'Heap Sort',
-    'radix': 'Radix Sort',
-    'shell': 'Shell Sort',
-    'cocktail': 'Cocktail Sort',
-    'counting': 'Counting Sort',
-    'bucket': 'Bucket Sort',
-    'bogo': 'Bogo Sort'
-  };
-  return names[algorithm as SortingAlgorithmType] || algorithm;
-};
+// Reserved for future enhancement - will be used when algorithm details are displayed inline
+// const getAlgorithmName = (algorithm: AlgorithmType): string => {
+//   const names: Record<string, string> = {
+//     'bubble': 'Bubble Sort',
+//     // ...other algorithms
+//   };
+//   return names[algorithm] || algorithm;
+// };
 
-// Helper function to get algorithm description
-const getAlgorithmDescription = (algorithm: AlgorithmType): string => {
-  const descriptions: Record<SortingAlgorithmType, string> = {
-    'bubble': 'Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.',
-    'selection': 'Finds the minimum element and places it at the beginning, then finds the next minimum element and places it, and so on.',
-    'insertion': 'Builds the sorted array one item at a time by comparing each new element with the already sorted elements.',
-    'merge': 'Divides the array into halves, sorts each half, then merges the sorted halves back together.',
-    'quick': 'Picks a pivot element and partitions the array around the pivot, with smaller elements to the left and larger to the right.',
-    'heap': 'Creates a max-heap from the array and repeatedly extracts the maximum element.',
-    'radix': 'Processes individual digits, grouping numbers by each digit position from least to most significant.',
-    'shell': 'Improves on insertion sort by allowing exchanges of elements far apart.',
-    'cocktail': 'A variation of bubble sort that sorts bidirectionally through the array.',
-    'counting': 'Counts occurrences of each element, then places elements in correct position based on their count and position.',
-    'bucket': 'Distributes elements into a number of buckets, then sorts each bucket individually.',
-    'bogo': 'A highly inefficient algorithm that randomly shuffles the array until it\'s sorted.'
-  };
-  return descriptions[algorithm as SortingAlgorithmType] || "No description available.";
-};
+// const getAlgorithmDescription = (algorithm: AlgorithmType): string => {
+//   const descriptions: Record<string, string> = {
+//     'bubble': 'A simple comparison-based sorting algorithm...',
+//     // ...other descriptions
+//   };
+//   return descriptions[algorithm] || 'No description available.';
+// };
 
 // Helper function to get algorithm time complexity
 const getAlgorithmTimeComplexity = (algorithm: AlgorithmType): string => {
