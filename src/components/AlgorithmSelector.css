@@ -1,0 +1,15 @@
+.algorithm-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.algorithm-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+button.selected {
+  background-color: #2980b9;
+}
